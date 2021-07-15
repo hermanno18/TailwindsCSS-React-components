@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Modal from '../modal'
 import NavBar from '../navBar'
 //var img = "http://hermannf.pythonanywhere.com/static/alphabox/assets/img/image4.jpeg"
 
@@ -7,9 +8,29 @@ export default class FormLogin extends Component {
         return (
             <section className='w-full p-4 relative bg-blue-300 min-h-screen flex justify-content-center align-center text-sm'>
                 <div className='w-full'>
+                    <div className="absolute">
+                    <Modal id="modal" title = "null"  >
+                        <form className="modal-content  flex place-content-center" action="/action_page.php">
+                            <div className="container w-1/2 p-4 text-center">
+                                <h1 className="text-2xl" >Delete Account</h1>
+                                <p>Are you sure you want to delete your account?</p>
+                                <div className="flex place-content-center"> 
+                                    <div class="clearfix w-1/2 text-white space-x-4 flex place-content-between">
+                                        <button type="button" className="bg-gray-400 rounded cursor-pointer bg-opacity-70 hover:bg-opacity-90 outline px-10 py-3">Cancel</button>
+                                        <button type="button" className="px-10 py-3 rounded cursor-pointer bg-opacity-70 hover:bg-opacity-90 bg-red-400">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </Modal>
+                    {/* <Modal id="modal2" title="un modal tr" header = "null" >
+                        <div>ddfvdf</div>
+                    </Modal> */}
+                    </div>
                     <NavBar />
-                    <div className="box-border grid grid-cols-3 rounded-xl rounded-sm relative overflow-hidden min-h-full">
-                        <div className=" bg-blue-900 col-span-3 md:col-span-1   text-gray-200 relative pt-24 md:pt-36 min-h-full overflow-hidden">
+                    
+                    <div className="border-0 grid grid-cols-3 rounded-xl rounded-sm relative overflow-hidden min-h-full">
+                        <div className=" bg-blue-900 col-span-3 md:col-span-1 text-gray-200 relative pt-24 md:pt-36 min-h-full overflow-hidden">
                             <div className="flex space-x-5 pl-9 ">
                                 <h1 className="text-2xl ">Lorem Ipsum</h1>
                                 <div className=" h-full flex justify-content-center align-center ">
@@ -67,7 +88,6 @@ export default class FormLogin extends Component {
                             </div>
                         </div> 
                     </div>
-
                 </div>
             </section>
         )

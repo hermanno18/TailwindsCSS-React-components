@@ -23,6 +23,27 @@ to work correctly this project (or any composent included) require these followi
 
 - ### `the navBar` as it name says, it's a navbar  ;-)
 
+- ### `a modal` a smart and simple way to implement modal il you app
+
+    You just have to include it into you component, and use the appropiate Tag to set you modal 
+    `example:`
+    import Modal from "component/modal"
+        (....)
+    \<Modal id="modal" title = "null"  >
+        \<form className="modal-content  flex place-content-center" action="/action_page.php">
+            \<div className="container w-1/2 p-4 text-center">
+                \<h1 className="text-2xl" >Delete Account</h1>
+                \<p>Are you sure you want to delete your account?</p>
+                \<div className="flex place-content-center">
+                    \<div class="clearfix w-1/2 text-white space-x-4 flex place-content-between">
+                        \<button type="button" className="bg-gray-400 rounded cursor-pointer bg-opacity-70 hover:bg-opacity-90 outline px-10 py-3">Cancel</button>
+                        \<button type="button" className="px-10 py-3 rounded cursor-pointer bg-opacity-70 hover:bg-opacity-90 bg-red-400">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </Modal>
+    
 - ### `a log in page` with a smart design adapted to both destop and mobile 
 
     `note that :`it requires the component `navBar`
